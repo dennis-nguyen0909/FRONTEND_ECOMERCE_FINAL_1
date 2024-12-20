@@ -5,6 +5,8 @@ import { NotFoundPage } from "../pages/NotFoundPage/NotFoundPage";
 import { ProductDetailPage } from "../pages/ProductDetailPage/ProductDetailPage";
 import { ProductPage } from "../pages/ProductPage/ProductPage";
 import { SignUpPage } from "../pages/SignUpPage/SignUpPage";
+import { SearchProduct } from "../pages/SearchProduct/SearchProduct";
+
 export const routes = [
   {
     path: "/",
@@ -46,5 +48,11 @@ export const routes = [
     path: "*",
     page: NotFoundPage,
     isShowHeader: false,
+  },
+  {
+    path: "/search-product",
+    page: SearchProduct,
+    isShowHeader: true,
+    isShowFooter: false,
   },
 ];
