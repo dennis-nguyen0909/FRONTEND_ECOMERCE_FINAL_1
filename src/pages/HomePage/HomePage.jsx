@@ -296,6 +296,77 @@ export const HomePage = () => {
                     </div>
                 </div>
             </WrapperDiv >
+            <WrapperDiv className='mobile'>
+                <WrapperDivNav className='navBar'>
+                    <div>
+                        <Dropdown overlay={menuTypeProducts} placement="bottom">
+                            <WrapperDivTextHover style={{ cursor: 'pointer' }}>
+                                Sản Phẩm
+                            </WrapperDivTextHover>
+                        </Dropdown>
+                    </div>
+                    <div>
+                        <WrapperDivTextHover style={{ color: 'rgb(255,116,109)' }}
+                            onClick={handleNavigatePageSales}>Giảm Giá</WrapperDivTextHover>
+                    </div>
+
+                    <div>
+                        <WrapperDivTextHover onClick={handleNavigatePageSupport}>
+                            Chăm Sóc Khách Hàng
+                        </WrapperDivTextHover>
+                    </div>
+                    <div>
+
+                        <WrapperDivTextHover>Bộ sưu tập</WrapperDivTextHover>
+                    </div>
+                </WrapperDivNav >
+                <div className='body' style={{ width: '100%', backgroundColor: "#fff" }}>
+                    <div id="container" style={{ height: 'fit-content' }}>
+                        <SliderComponent arrImages={[slider1, slider2, slider3, slider4, slider5, slider6]} />
+                        <div style={{
+                            display: 'flex', justifyContent: 'center',
+                            alignItems: 'center', margin: '20px 0', fontSize: '30px',
+                        }}>Sản Phẩm Mới</div>
+
+                        <LoadingComponent isLoading={isLoading}>
+                            <WrapperProduct>
+                                {
+                                    product2?.map((product) => (
+                                        <CardComponent
+                                            id={product._id}
+                                            key={product._id}
+                                            countInStock={product.countInStock}
+                                            description={product.description}
+                                            image={product.image}
+                                            name={product.name}
+                                            price={product.price}
+                                            rating={product.rating}
+                                            type={product.type}
+                                            discount={product.discount}
+                                            selled={product.selled}
+                                        />
+                                    ))
+                                }
+                                {hasMore && <div ref={elementRef} style={{ width: '100%', height: '80px' }}><Skeleton active /></div>}
+                            </WrapperProduct>
+                            {/* <div style={{ width: '100%', display: 'flex', justifyContent: 'center', margin: '15px 0' }}>
+                                {products?.total !== products?.data.length || !products?.totalPage === 1 ? (
+                                    < WrapperButtonMore type={'outline'} textButton={'Xem thêm'} styleButton={{
+                                        border: '1px solid #ccc', color: 'black', width: '240px',
+                                        height: '38px', borderRadius: '4px',
+                                    }}
+                                        styleTextButton={{ fontWeight: '500' }} onClick={handleLoadMore}
+                                    />)
+                                    : (
+                                        <>
+                                        </>
+                                    )
+                                }
+                            </div> */}
+                        </LoadingComponent>
+                    </div>
+                </div>
+            </WrapperDiv >
          
         </WrapperContainer>
     )
