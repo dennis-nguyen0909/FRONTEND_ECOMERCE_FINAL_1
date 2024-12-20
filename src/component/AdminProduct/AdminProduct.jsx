@@ -548,7 +548,7 @@ export const AdminProduct = () => {
                                 },
                             ]}
                         >
-                            <InputComponent value={stateProduct.price} onChange={handleOnChangeProduct} name="price" />
+                            <InputComponent type="number" value={stateProduct.price} onChange={handleOnChangeProduct} name="price" />
                         </Form.Item>
                         <Form.Item
                             label="Type"
@@ -623,7 +623,7 @@ export const AdminProduct = () => {
                                 },
                             ]}
                         >
-                            <InputComponent value={stateProduct.rating} onChange={handleOnChangeProduct} name="rating" />
+                            <InputComponent type="number" value={stateProduct.rating} onChange={handleOnChangeProduct} name="rating" />
                         </Form.Item>
 
 
@@ -649,7 +649,7 @@ export const AdminProduct = () => {
                                 },
                             ]}
                         >
-                            <InputComponent value={stateProduct.countInStock} onChange={handleOnChangeProduct} name="countInStock" />
+                            <InputComponent type="number" value={stateProduct.countInStock} onChange={handleOnChangeProduct} name="countInStock" />
                         </Form.Item>
                         <Form.Item
                             label="Discount"
@@ -661,7 +661,7 @@ export const AdminProduct = () => {
                                 },
                             ]}
                         >
-                            <InputComponent value={stateProduct.discount} onChange={handleOnChangeProduct} name="discount" />
+                            <InputComponent type="number" value={stateProduct.discount} onChange={handleOnChangeProduct} name="discount" />
                         </Form.Item>
                         <Form.Item
                             label="Image"
@@ -742,7 +742,7 @@ export const AdminProduct = () => {
                                 },
                             ]}
                         >
-                            <InputComponent value={stateProductDetail.price} onChange={handleOnChangeProductDetail} name="price" />
+                            <InputComponent type="number" value={stateProductDetail.price} onChange={handleOnChangeProductDetail} name="price" />
                         </Form.Item>
                         <Form.Item
                             label="Type"
@@ -804,7 +804,7 @@ export const AdminProduct = () => {
                                 },
                             ]}
                         >
-                            <InputComponent value={stateProductDetail.rating} onChange={handleOnChangeProductDetail} name="rating" />
+                            <InputComponent type="number" value={stateProductDetail.rating} onChange={handleOnChangeProductDetail} name="rating" />
                         </Form.Item>
                         <Form.Item
                             label="Description"
@@ -828,7 +828,7 @@ export const AdminProduct = () => {
                                 },
                             ]}
                         >
-                            <InputComponent value={stateProductDetail.countInStock} onChange={handleOnChangeProductDetail} name="countInStock" />
+                            <InputComponent type="number" value={stateProductDetail.countInStock} onChange={handleOnChangeProductDetail} name="countInStock" />
                         </Form.Item>
                         <Form.Item
                             label="Discount"
@@ -840,7 +840,7 @@ export const AdminProduct = () => {
                                 },
                             ]}
                         >
-                            <InputComponent value={stateProductDetail.discount} onChange={handleOnChangeProduct} name="discount" />
+                            <InputComponent type="number" value={stateProductDetail.discount} onChange={handleOnChangeProduct} name="discount" />
                         </Form.Item>
                         <Form.Item
                             label="Image"
