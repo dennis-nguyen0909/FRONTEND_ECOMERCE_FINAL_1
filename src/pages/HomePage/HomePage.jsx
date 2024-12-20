@@ -296,7 +296,6 @@ export const HomePage = () => {
                     </div>
                 </div>
             </WrapperDiv >
-<<<<<<< HEAD
             <WrapperDiv className='mobile'>
                 <WrapperDivNav className='navBar'>
                     <div>
@@ -369,9 +368,6 @@ export const HomePage = () => {
                 </div>
             </WrapperDiv >
             <Footer />
-=======
-         
->>>>>>> 2fec8b4 (view for pc)
         </WrapperContainer>
     )
 }
