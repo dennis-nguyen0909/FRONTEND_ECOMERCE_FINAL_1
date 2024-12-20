@@ -1,12 +1,12 @@
 
-import { SalesProduct } from "../pages/SalesProduct/SalesProduct";
+import { SupportPage } from "../pages/SupportPage/SupportPage";
 export const routes = [
   
   {
-    path: "/product-sales",
-    page: SalesProduct,
+    path: "/support",
+    page: SupportPage,
     isShowHeader: true,
     isShowFooter: false,
   },
- 
+  
 ];
