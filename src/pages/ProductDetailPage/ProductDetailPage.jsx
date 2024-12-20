@@ -15,7 +15,7 @@ export const ProductDetailPage = () => {
                 {/* <span style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>Trang chủ </span > */}
                 Chi tiết sản phẩm
             </h4>
-            <ProductDetailsComponent idProduct={idProduct.id} />
+            {/* <ProductDetailsComponent idProduct={idProduct.id} /> */}
         </WrapperDiv>
     )
 }
