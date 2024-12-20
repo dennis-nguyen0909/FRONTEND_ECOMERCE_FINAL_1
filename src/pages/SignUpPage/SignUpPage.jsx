@@ -67,7 +67,7 @@ export const SignUpPage = () => {
                             style={{
                                 zIndex: 10,
                                 position: 'absolute',
-                                top: '4px',
+                                top: '37px',
                                 right: '8px'
                             }}>
                             {isShowPassword ? (<EyeFilled />) : (<EyeInvisibleFilled />)}
@@ -80,7 +80,7 @@ export const SignUpPage = () => {
                             style={{
                                 zIndex: 10,
                                 position: 'absolute',
-                                top: '4px',
+                                top: '37px',
                                 right: '8px'
                             }}>
                             {isShowConfirmPassword ? (<EyeFilled />) : (<EyeInvisibleFilled />)}
