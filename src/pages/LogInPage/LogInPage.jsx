@@ -137,6 +137,9 @@ export const LogInPage = () => {
                         </p>
                     </div>
                 </WrapperContainerLeft>
+                <WrapperContainerRight className='image-login'>
+                    <Image src={logo} preview={false} alt='image-logo' height={'100%'} width={"100%"} />
+                </WrapperContainerRight>
             </div >
         </WrapperDivContainer>
     )
