@@ -20,7 +20,7 @@ import { DrawerComponent } from '../DrawerComponent/DrawerComponent'
 import { InputComponent } from '../InputComponent/InputComponent'
 import { ButtonComponent } from '../ButtonComponent/ButtonComponent'
 import { WrapperButtonQuality, WrapperQualityProduct } from '../ProductDetailsComponent/style'
-import { decreaseAmount, increaseAmount, removeOrderProduct } from '../../redux/slides/orderSlide'
+import { decreaseAmount, increaseAmount, removeOrderProduct, resetOrder } from '../../redux/slides/orderSlide'
 import { covertPrice } from '../../untils'
 import { TypeProduct } from '../TypeProduct/TypeProduct'
 // import slider4 from '../../assets/images/slider4.jpg'
@@ -176,6 +176,7 @@ export const Header = ({ isHiddenSearch = false, isHiddenCart = false }) => {
         localStorage.removeItem("access_token")
         navigate('/')
         dispatch(resetUser())
+        dispatch(resetOrder())
         setLoading(false)
     }
     const handleNavigateProfile = () => {
