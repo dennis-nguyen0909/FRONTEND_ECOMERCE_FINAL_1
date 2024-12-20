@@ -79,6 +79,29 @@ export const AdminPage = () => {
                     </div>
                 </div >
             </div>
+            <div className='mobile'>
+                <div>
+                    <Header isHiddenSearch isHiddenCart />
+                </div>
+                <div style={{ display: 'flex' }}>
+                    <Menu
+                        onClick={onClick}
+                        style={{
+                            width: 50,
+                            boxShadow: '1px 1px 2px #ccc',
+                            height: '1500px'
+                        }}
+                        defaultSelectedKeys={['1']}
+                        defaultOpenKeys={['sub1']}
+                        mode="inline"
+                        items={items}
+                    />
+                    <div style={{ color: 'black', flex: '1' }}>
+                        {renderPage(keySelected)}
+                    </div>
+                    <div>Nhân viên</div>
+                </div >
+            </div>
         </WrapperDivContainer>
     )
 }
