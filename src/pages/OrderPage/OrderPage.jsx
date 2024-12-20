@@ -33,6 +33,8 @@ export const OrderPage = () => {
     const [loading, setLoading] = useState(false)
     const user = useSelector((state) => state.user)
     const [isModalOpen, setIsModalOpen] = useState(false)
+    const [address,setAddress]=useState('')
+    const [phone,setPhone]=useState('')
 
     const [stateUserDetail, setStateUserDetail] = useState({
         name: '',
@@ -157,8 +159,8 @@ export const OrderPage = () => {
     const handlePayment = async () => {
         if (!order?.orderItemsSelected?.length) {
             message.error("Vui lòng chọn sản phẩm ?")
-        // } else if (!user?.districts || !user?.ward || !user?.name || !user?.phone || !user?.address) {
-        //     setIsModalOpen(true)
+        } else if (!user?.phone || !user?.address) {
+            setIsModalOpen(true)
         } else {
             navigate('/payment')
 
@@ -169,10 +171,12 @@ export const OrderPage = () => {
         setIsModalOpen(false);
     }
     const onUpdate = async () => {
+        
         const res = await fetchUpdateUser(stateUserDetail);
         setStateUserDetail(res.data)
         dispatch(updateUser(res.data, user?.access_token))
-
+        console.log("res",res)
+        console.log("res",stateUserDetail)
         if (res.status === 'Ok') {
             message.success('Update thành công !');
             formModal.setFieldValue(user)
@@ -265,15 +269,17 @@ export const OrderPage = () => {
                                 <InputForm
                                     placeholder={'Số điện thoại'}
                                     name="phone"
-                                    value={user?.phone && user?.phone}
+                                    onChange={(e)=>setPhone(e.target.value)}
+                                    value={phone || user?.phone && user?.phone}
 
                                 />
                             </div>
                             <InputForm
                                 placeholder={'Địa Chỉ'}
                                 name="address"
+                                onChange={(e)=>setAddress(e.target.value)}
                                 // value={allAddress ? allAddress : user?.address}
-                                value={user?.address + " " + user?.ward + " " + user?.districts + " " + user?.city}
+                                value={address || user?.address + " " + user?.ward + " " + user?.districts + " " + user?.city}
                                 
                             />
 
@@ -383,6 +389,8 @@ export const OrderPage = () => {
                                 <Form.Item
                                     label="Phone"
                                     name="phone"
+                                    
+
                                     rules={[
                                         {
                                             required: true,
@@ -408,7 +416,7 @@ export const OrderPage = () => {
                                 >
                                     <Input value={stateUserDetail?.address} onChange={handleOnChangeUserDetail} name="address" />
                                 </Form.Item>
-                                <div style={{ display: 'flex', alignItems: 'center', }}>
+                                {/* <div style={{ display: 'flex', alignItems: 'center', }}>
                                     <h5>Chọn tỉnh/thành phố :</h5>
                                     <Select style={{ width: 200 }} onChange={handleCityChange}>
                                         {cityData.map((city) => (
@@ -435,7 +443,7 @@ export const OrderPage = () => {
                                         value={stateUserDetail?.ward}
                                         onChange={handleOnChangeWard}
                                     />
-                                </div>
+                                </div> */}
                                 <Form.Item
                                     wrapperCol={{
                                         offset: 20,
