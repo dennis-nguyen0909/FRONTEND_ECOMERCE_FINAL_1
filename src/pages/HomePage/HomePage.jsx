@@ -367,7 +367,7 @@ export const HomePage = () => {
                     </div>
                 </div>
             </WrapperDiv >
-         
+            <Footer />
         </WrapperContainer>
     )
 }
