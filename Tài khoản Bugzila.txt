@@ -1,0 +1,8 @@
+Tài khoản Bugzila 				//localhost »bugs »profiles
+
+	 TK:			MK:
+	 MinhDuy@gmail.com 	123456
+	 QuocAnh@gmail.com	123456
+	 NguyenVu@gmail.com	123456
+Admin==> VinhPhong@gmai.com	123456		
+
